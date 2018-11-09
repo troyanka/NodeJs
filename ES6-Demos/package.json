@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:prod": "node dist/app.js",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "eventLoop": "nodemon eventLoop.js.js"
   },
   "keywords": [],
   "author": "",
