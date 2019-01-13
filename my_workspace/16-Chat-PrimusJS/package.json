@@ -1,0 +1,20 @@
+{
+  "name": "15-Chat-PrimusJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "chat:public": "node public-chat-server.js",
+    "chat:private": "node private-rooms-chat-server.js"
+  },
+  "keywords": [],
+  "author": "Ajar <ajar@artizan.io> (https://artizan.io)",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "primus": "^6.0.2",
+    "primus-rooms": "^3.4.1",
+    "sockjs": "^0.3.17",
+    "sockjs-client": "^1.1.1"
+  }
+}

@@ -1,20 +1,18 @@
 {
-  "name": "users",
+  "name": "04-Express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.5.3",
-    "cli-color": "^1.4.0"
-  },
-  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "nodemon": "^1.18.6"
   }
 }
