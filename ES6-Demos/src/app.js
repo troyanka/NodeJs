@@ -329,3 +329,9 @@ p.info(`${first}, ${second}, ${theRest}`)*/
 
 
 // practice - http://es6katas.org/
+
+const bob = {name: 'Bob'};
+const alice = {name: 'Alice'};
+p.magenta(bob.name)
+const foundAt = [bob, alice].findIndex(({name:{length:l}}) => length > 3);
+p.magenta('foundAt:',foundAt)
