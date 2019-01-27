@@ -1,0 +1,104 @@
+%wrapper {
+    padding: 0.5rem;
+    margin-bottom: 15px;
+    //background-color: #f5f6f7;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+}
+
+body{
+    background-color: #e9ebee;
+    font-family: 'Aleo', serif;
+}
+
+.in-update-mode {
+    display: none;
+}
+
+.btn {
+    color: #fff !important;
+    background-color: #009688;
+    border: none;
+    outline: 0;
+    margin: 8px 0;
+    width: fit-content;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    max-width: 640px;
+    margin: 0 auto;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+
+    .user-comments {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+
+    header {
+        text-align: center;
+    }
+
+    .container-content {
+        margin: 0 auto;
+        padding: 1%;
+
+        .comment {
+            display: flex;
+            flex-basis: 45%;
+            @extend %wrapper;
+
+            .comment-content {
+                flex-basis: 80%;
+
+                h3 {
+                    margin-top: 0;
+                }
+
+                .publish-date{
+                    color: #139600;
+                }
+            }
+
+            img {
+                margin-right: 10px;
+                align-self: flex-start;
+            }
+
+            .icons {
+                flex-basis: 10%;
+                display: flex;
+
+                i {
+                    padding: 5px;
+                }
+                i:hover{
+                    zoom: 110%;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .form-for-comment {
+            @extend %wrapper;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #414449;
+
+            input,
+            textarea {
+                margin-bottom: 20px;
+                padding: 1%;
+            }
+        }
+    }
+}

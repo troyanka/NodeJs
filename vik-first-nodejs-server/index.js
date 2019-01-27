@@ -1,18 +1,28 @@
-const products = require('./products');
-const path = require('path');
-const _ = require('underscore');
+const express = require('express');
+const exphbs = require('express-handlebars');
+const port = 5000;
 
-console.log("__dirname:", __dirname);
+const app = express();
 
-console.log("__filename:", __filename);
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
 
-console.log(products.id);
+app.get('/', (req, res) => {
+    res.render('home', {
+        pageTitle: 'Home'
+    });
+});
+app.get('/about', (req, res) => {
+    res.render('about', {
+        pageTitle: 'About'
+    });
+});
+app.get('/contact', (req, res) => {
+    res.render('contact', {
+        pageTitle: 'Contact'
+    });
+});
 
-console.log(products.fn());
-
-let res = path.parse(__filename);
-console.log("res.ext::: ", res.ext);
-
-//Use with underscore
-let result = _.contains([10, 20, 30], 25);
-console.log("result", result);
+app.listen(port, () => console.log(`resver runs on ${port}`));
